@@ -1,0 +1,16 @@
+<h1>My Plants</h1>
+<br><br>
+<h3>Enter New plant</h3>
+  <%= simple_form_for @plant do |f| %>
+    <%= f.input :name %>
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
+<br><br>
+
+<% @plants.each do |plant| %>
+  <div>
+    <p><%= plant.name %></p><br />
+  </div>
+
+  <hr />
+<% end %>
